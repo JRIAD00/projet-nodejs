@@ -1,0 +1,31 @@
+### get all articles
+GET http://localhost:3000/articles
+
+### get an article with id
+GET http://localhost:3000/articles/102
+
+### add new article
+POST http://localhost:3000/articles
+Content-Type: application/json
+
+{
+    "titre": "this is a new Article",
+    "contenu": "This is an article content.",
+    "image": "new-article-image.jpg",
+    "published": true,
+    "utilisateurId": 2,
+    "categorieIds": [1, 2]
+}
+
+
+### update an article
+PATCH http://localhost:3000/articles/1
+Content-Type: application/json
+
+{
+    "titre": "updated article",
+    "contenu": "this the updated article"
+}
+
+### delete an article
+DELETE http://localhost:3000/articles/3

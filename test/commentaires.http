@@ -1,0 +1,26 @@
+### get all users
+GET http://localhost:3000/comments
+
+### get a user by id
+GET http://localhost:3000/comments/37
+
+### add new user
+POST http://localhost:3000/comments
+Content-Type: application/json
+
+{
+    "email": "driss@gmail.com",
+    "contenu": "this is a comment",
+    "articleId": 112
+}
+
+### update an article
+PATCH http://localhost:3000/comments/37
+Content-Type: application/json
+
+{
+    "contenu": "updated comment"
+}
+
+### delete an article
+DELETE http://localhost:3000/comments/37
